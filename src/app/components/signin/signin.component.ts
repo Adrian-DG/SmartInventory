@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { AuthService } from "../../services/authentication/auth.service";
 
+import { Router } from "@angular/router";
+
 @Component({
 	selector: "app-signin",
 	templateUrl: "./signin.component.html",
@@ -17,12 +19,19 @@ export class SigninComponent implements OnInit {
 		]),
 	});
 
-	constructor(private _auth: AuthService) {}
+	constructor(private _auth: AuthService, private $router: Router) {}
 
 	ngOnInit(): void {}
 
 	onSubmit() {
 		const { email, password } = this.signinForm.value;
-		this._auth.SignIn(email, password);
+		const status = this._auth.SignIn(email, password);
+
+		if (!status) {
+			alert("Something went wrong, check your credentials again");
+			return;
+		}
+
+		this.$router.navigate(["home"]);
 	}
 }

@@ -11,6 +11,9 @@ import { AuthPageComponent } from "./pages/auth-page/auth-page/auth-page.compone
 import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { HomeComponent } from "./pages/home/home.component";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeTabComponent } from './components/home-tab/home-tab.component';
 
 @NgModule({
 	declarations: [
@@ -19,6 +22,9 @@ import { HomeComponent } from "./pages/home/home.component";
 		SigninComponent,
 		SignupComponent,
 		HomeComponent,
+		NavbarComponent,
+		HeaderComponent,
+		HomeTabComponent,
 	],
 	imports: [
 		BrowserModule,
