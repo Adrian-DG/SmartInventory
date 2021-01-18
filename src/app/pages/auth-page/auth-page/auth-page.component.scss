@@ -1,0 +1,36 @@
+#auth-main {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	nav {
+		margin: 0.5em auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.card {
+		width: 80%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.card {
+		width: 55%;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+	.card {
+		width: 40%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.card {
+		width: 30%;
+	}
+}

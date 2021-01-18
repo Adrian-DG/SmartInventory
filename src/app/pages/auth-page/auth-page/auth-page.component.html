@@ -1,0 +1,45 @@
+<div id="auth-main">
+	<div class="card">
+		<div class="card-header">
+			<h2 class="card-title text-center">Welcome</h2>
+			<p class="card-subtitle text-center">
+				We help you manage your business inventory
+			</p>
+		</div>
+
+		<div class="card-body">
+			<nav>
+				<div class="nav nav-pills ml-auto" role="tablist">
+					<a
+						href="#signin-tab"
+						class="nav-link active"
+						data-bs-toggle="pill"
+						role="tab"
+						>Sign In</a
+					><a
+						href="#signup-tab"
+						class="nav-link"
+						data-bs-toggle="pill"
+						role="tab"
+						>Sign Up</a
+					>
+				</div>
+			</nav>
+
+			<hr />
+
+			<div class="tab-content">
+				<div
+					class="tab-pane fade show active"
+					role="tabpanel"
+					id="signin-tab"
+				>
+					<app-signin></app-signin>
+				</div>
+				<div class="tab-pane fade show" role="tabpanel" id="signup-tab">
+					<app-signup></app-signup>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
