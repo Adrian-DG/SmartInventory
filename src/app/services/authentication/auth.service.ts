@@ -1,8 +1,8 @@
 import { utf8Encode } from "@angular/compiler/src/util";
 import { Injectable } from "@angular/core";
-import { AngularFireAuth } from "@angular/fire/auth";
 import { IUser } from "../../interfaces/user/user";
 
+import { AngularFireAuth } from "@angular/fire/auth";
 import { FireDbService } from "../firebase-db/fire-db.service";
 
 @Injectable({

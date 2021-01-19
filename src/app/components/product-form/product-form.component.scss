@@ -1,0 +1,25 @@
+%border-round {
+    border: 1px solid gainsboro;
+    border-radius: 0.5em;
+}
+
+#product-form {
+    width: 100%;
+    min-height: 20vh;
+    height: auto;
+    padding: 1.5em;
+    margin-left: .5em;
+    @extend %border-round;
+    #image-container {
+        @extend %border-round;
+        .product-img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+    }
+    
+    .form-control {
+        margin: .5em auto;
+    }
+}

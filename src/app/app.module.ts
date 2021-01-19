@@ -14,6 +14,8 @@ import { HomeComponent } from "./pages/home/home.component";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeTabComponent } from './components/home-tab/home-tab.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductTableComponent } from './components/product-table/product-table.component';
 
 @NgModule({
 	declarations: [
@@ -25,6 +27,8 @@ import { HomeTabComponent } from './components/home-tab/home-tab.component';
 		NavbarComponent,
 		HeaderComponent,
 		HomeTabComponent,
+		ProductFormComponent,
+		ProductTableComponent,
 	],
 	imports: [
 		BrowserModule,

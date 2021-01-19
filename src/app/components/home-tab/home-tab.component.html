@@ -1,5 +1,16 @@
-<div class="d-flex align-items-start">
-	<nav class="d-flex flex-column nav-pills" role="tablist">
-		// TODO: add tab links
+<div id="home-tab" class="d-flex  align-items-start">
+	<nav class="nav nav-pills" role="tablist">
+		<a href="#product-tab" class="nav-link active" data-bs-toggle="pill" role="tab">Products</a>
+		<a href="#supplier-tab" class="nav-link" data-bs-toggle="pill" role="tab">Suppliers</a>
 	</nav>
+	<div class="tab-content">
+		<div class="tab-pane fade show active" role="tabpanel" id="product-tab">
+			<h3 class="text-center">Products</h3>
+			<app-product-form></app-product-form>
+			<app-product-table></app-product-table>
+		</div>
+		<div class="tab-pane fade" role="tabpanel" id="supplier-tab">
+			<h3 class="text-center">Suppliers</h3>
+		</div>
+	</div>
 </div>
