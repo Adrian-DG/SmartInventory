@@ -16,6 +16,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeTabComponent } from './components/home-tab/home-tab.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
+import { SupplierFormComponent } from './components/suppliers/supplier-form/supplier-form.component';
+import { SupplierTableComponent } from './components/suppliers/supplier-table/supplier-table.component';
 
 @NgModule({
 	declarations: [
@@ -29,6 +31,8 @@ import { ProductTableComponent } from './components/product-table/product-table.
 		HomeTabComponent,
 		ProductFormComponent,
 		ProductTableComponent,
+		SupplierFormComponent,
+		SupplierTableComponent,
 	],
 	imports: [
 		BrowserModule,

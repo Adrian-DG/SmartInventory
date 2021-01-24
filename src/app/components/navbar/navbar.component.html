@@ -17,16 +17,23 @@
 						class="nav-link dropdown-toggle"
 						role="button"
 						data-bs-toggle="dropdown"
-						>
+					>
 						<span><i class="bi bi-person-circle"></i></span>
-						{{ currentUser.email }}</a
+						{{ currentUser }}</a
 					>
 					<ul class="dropdown-menu dropdown-menu-end">
 						<li><a href="#" class="dropdown-item">item</a></li>
 						<li><hr class="dropdown-divider" /></li>
 						<li><a href="#" class="dropdown-item">item</a></li>
 						<li><hr class="dropdown-divider" /></li>
-						<li><a href="#" class="dropdown-item">Sign Out</a></li>
+						<li>
+							<a
+								href="#"
+								class="dropdown-item btn btn-secondary"
+								(click)="LogOut()"
+								>Sign Out</a
+							>
+						</li>
 					</ul>
 				</li>
 			</ul>

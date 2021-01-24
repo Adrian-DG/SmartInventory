@@ -1,43 +1,62 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-  
-
-#home-tab {
-    width: 100%;
-    height: 95vh;
-    .nav {
-        width: 15%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 1.5em;
-        background-color: $back-color;
-        .nav-link {
-            text-align: center;
-            width: 90%;
-            margin: 0.5em auto;
-            color: $secondary-font-color;
-            font-weight: 600;
-        }
-        .nav-link.active {
-            background-color: $secondary-color  !important;
-            color: white !important;
-        }
-    }
-    .tab-content {
-        padding: 2em 1em;
-        .tab-pane {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            h3 {
-                color: $secondary-font-color;
-            }
-        }
-    }
+@media (max-width: 1023px) {
+	#home-tab {
+		display: flex;
+		flex-direction: column !important;
+		.nav {
+			width: 100% !important;
+			height: auto !important;
+			display: flex;
+			flex-direction: row !important;
+			justify-content: flex-start;
+			align-items: center;
+			.nav-link {
+				width: auto !important;
+			}
+		}
+	}
 }
 
+#home-tab {
+	width: 100%;
+	height: 95vh;
+	overflow: auto;
+	.nav {
+		width: 15%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding-top: 1.5em;
+		background-color: $back-color;
+		.nav-link {
+			text-align: center;
+			width: 90%;
+			margin: 0.5em auto;
+			color: $secondary-font-color;
+			font-weight: 600;
+		}
+		.nav-link.active {
+			background-color: $secondary-color !important;
+			color: white !important;
+		}
+	}
+	.tab-content {
+		width: 85%;
+		padding: 2em 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		.tab-pane {
+			overflow: auto;
+			width: 100%;
+			height: auto;
+			h3 {
+				color: $secondary-font-color;
+			}
+		}
+	}
+}

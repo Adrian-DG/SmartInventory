@@ -1,0 +1,35 @@
+<table class="table table-responsive">
+	<thead class="bg-light">
+		<tr>
+			<td>Name</td>
+			<td>Phone</td>
+			<td>Email</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let supplier of suppliers | async">
+			<td>{{ supplier.name }}</td>
+			<td>{{ supplier.phone }}</td>
+			<td>{{ supplier.email }}</td>
+			<td>
+				<button class="btn btn-light" (click)="GetDetails(supplier.id)">
+					Details
+				</button>
+			</td>
+			<td>
+				<button class="btn btn-danger" (click)="Delete(supplier.id)">
+					Delete
+				</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<br /><br />
+
+// TODO: create and render supplier on modal
+<div *ngIf="currentSupplier">
+	<span>{{ currentSupplier | json }}</span>
+</div>

@@ -19,19 +19,12 @@ export class SigninComponent implements OnInit {
 		]),
 	});
 
-	constructor(private _auth: AuthService, private $router: Router) {}
+	constructor(private _auth: AuthService) {}
 
 	ngOnInit(): void {}
 
 	onSubmit() {
 		const { email, password } = this.signinForm.value;
-		const status = this._auth.SignIn(email, password);
-
-		if (!status) {
-			alert("Something went wrong, check your credentials again");
-			return;
-		}
-
-		this.$router.navigate(["home"]);
+		this._auth.SignIn(email, password);
 	}
 }
