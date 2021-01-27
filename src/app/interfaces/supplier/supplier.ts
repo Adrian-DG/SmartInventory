@@ -5,6 +5,5 @@ export interface ISupplier {
 	name: string;
 	phone: string;
 	email: string;
-	products?: IProduct[];
 	user_id?: string;
 }

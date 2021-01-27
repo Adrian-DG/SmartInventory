@@ -2,12 +2,10 @@ import { Injectable } from "@angular/core";
 import {
 	AngularFirestore,
 	AngularFirestoreCollection,
-	AngularFirestoreDocument,
 } from "@angular/fire/firestore";
 import { ISupplier } from "src/app/interfaces/supplier/supplier";
 import { IUser } from "../../interfaces/user/user";
-
-import { uuid } from "uuidv4";
+import { IProduct } from "src/app/interfaces/product/product";
 
 @Injectable({
 	providedIn: "root",
@@ -16,6 +14,7 @@ export class FireDbService {
 	private collections = {
 		users: "users",
 		suppliers: "suppliers",
+		products: "products",
 	};
 
 	constructor(private _db: AngularFirestore) {}
@@ -29,13 +28,12 @@ export class FireDbService {
 	}
 
 	CreateSupplier(suplier: ISupplier): void {
+		suplier.id = this._db.createId();
+		suplier.user_id = sessionStorage.getItem("userUID") || "";
+
 		this._db
 			.collection(this.collections.suppliers)
-			.add({
-				id: uuid(),
-				...suplier,
-				user_id: sessionStorage.getItem("userUID"),
-			})
+			.add(suplier)
 			.then(() => alert("supplier created succesfully"))
 			.catch((error) => console.log(error));
 	}
@@ -53,6 +51,7 @@ export class FireDbService {
 		);
 	}
 
+	// return user details
 	GetSupplierById(id: string): AngularFirestoreCollection<ISupplier> {
 		return this._db.collection<ISupplier>(
 			this.collections.suppliers,
@@ -69,6 +68,14 @@ export class FireDbService {
 			.doc<ISupplier>(id)
 			.delete()
 			.then(() => alert("A document has been deleted"))
+			.catch((error) => console.log(error));
+	}
+
+	CreateProduct(product: IProduct): void {
+		this._db
+			.collection(this.collections.products)
+			.add(product)
+			.then(() => alert("A new product has been added"))
 			.catch((error) => console.log(error));
 	}
 }

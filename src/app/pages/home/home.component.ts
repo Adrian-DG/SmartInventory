@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 	styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-	user!: string | null;
+	user!: string;
 
 	constructor(private $router: Router) {}
 
@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
 			return;
 		}
 
-		this.user = sessionStorage.getItem("currentUser");
+		this.user = sessionStorage.getItem("currentUser") || "";
 	}
 }

@@ -17,16 +17,22 @@ export class SupplierTableComponent implements OnInit {
 		this.suppliers = this._db.GetUserSuppliers().valueChanges();
 	}
 
-	GetDetails(id: string): void {
+	GetDetails(supplier: ISupplier): void {
+		if (supplier.id == undefined) {
+			return;
+		}
 		this._db
-			.GetSupplierById(id)
+			.GetSupplierById(supplier.id)
 			.valueChanges()
 			.subscribe((data) => {
 				data.forEach((item) => (this.currentSupplier = item));
 			});
 	}
 
-	Delete(id: string): void {
-		this._db.DeleteSupplier(id);
+	Delete(supplier: ISupplier): void {
+		if (supplier.id == undefined) {
+			return;
+		}
+		this._db.DeleteSupplier(supplier.id);
 	}
 }
