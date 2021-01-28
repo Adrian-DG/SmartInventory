@@ -6,16 +6,12 @@ This web app uses the following technologies:
 -   Firebase for Authentication and Database (FireStore).
 -   Bootstrap 5, including icons.
 
-###Sign In/ Sign Up
+<img src="/src/assets/signin.PNG" alt="signin"/>
+<img src="/src/assets/signup.PNG alt="signup"/>
 
-<img src="./src/assets/signin.png">
-<img src="./src/assets/signup.png">
-
-###Other Screens
-
-<img src="./src/assets/product.png">
-<img src="./src/assets/supplier.png">
-<img src="./src/assets/details.png">
+<img src="/src/assets/product.PNG" alt="products" />
+<img src="/src/assets/supplier.PNG" alt="suppliers"/>
+<img src="/src/assets/details.PNG" alt="details"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
