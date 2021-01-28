@@ -1,5 +1,22 @@
 # SmartInventory
 
+This web app uses the following technologies:
+
+-   Angular Firestore to interact with Firebase CloudStore.
+-   Firebase for Authentication and Database (FireStore).
+-   Bootstrap 5, including icons.
+
+###Sign In/ Sign Up
+
+<img src="./src/assets/signin.png">
+<img src="./src/assets/signup.png">
+
+###Other Screens
+
+<img src="./src/assets/product.png">
+<img src="./src/assets/supplier.png">
+<img src="./src/assets/details.png">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 ## Development server
