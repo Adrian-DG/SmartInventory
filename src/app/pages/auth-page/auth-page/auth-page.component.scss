@@ -11,6 +11,10 @@
 	}
 }
 
+.card {
+	box-shadow: 0.2em 0.2em 0.5em rgb(168, 167, 167);
+}
+
 @media (max-width: 767px) {
 	.card {
 		width: 80%;

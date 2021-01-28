@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
+import { IProduct } from "src/app/interfaces/product/product";
 import { ISupplier } from "src/app/interfaces/supplier/supplier";
 import { FireDbService } from "src/app/services/firebase-db/fire-db.service";
 
@@ -10,7 +11,8 @@ import { FireDbService } from "src/app/services/firebase-db/fire-db.service";
 })
 export class SupplierTableComponent implements OnInit {
 	suppliers!: Observable<ISupplier[]>;
-	currentSupplier!: Observable<ISupplier[]> | {};
+	currentSupplier!: string;
+	products!: Observable<IProduct[]>;
 	constructor(private _db: FireDbService) {}
 
 	ngOnInit(): void {
@@ -18,15 +20,13 @@ export class SupplierTableComponent implements OnInit {
 	}
 
 	GetDetails(supplier: ISupplier): void {
-		if (supplier.id == undefined) {
+		if (supplier.id == null) {
 			return;
 		}
-		this._db
-			.GetSupplierById(supplier.id)
-			.valueChanges()
-			.subscribe((data) => {
-				data.forEach((item) => (this.currentSupplier = item));
-			});
+		this.currentSupplier = supplier.name;
+		this.products = this._db
+			.GetSupplierProducts(supplier.id)
+			.valueChanges();
 	}
 
 	Delete(supplier: ISupplier): void {

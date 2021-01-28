@@ -78,4 +78,13 @@ export class FireDbService {
 			.then(() => alert("A new product has been added"))
 			.catch((error) => console.log(error));
 	}
+
+	GetSupplierProducts(id: string): AngularFirestoreCollection<IProduct> {
+		return this._db.collection<IProduct>(
+			this.collections.products,
+			(ref) => {
+				return ref.where("supplier", "==", id);
+			}
+		);
+	}
 }
