@@ -14,6 +14,12 @@
 			role="tab"
 			>Suppliers</a
 		>
+		<a href="#brands-tab" class="nav-link" data-bs-toggle="pill" role="tab"
+			>Brands</a
+		>
+		<a href="#orders-tab" class="nav-link" data-bs-toggle="pill" role="tab"
+			>Orders</a
+		>
 	</nav>
 	<div class="tab-content">
 		<div class="tab-pane fade show active" role="tabpanel" id="product-tab">
@@ -22,6 +28,13 @@
 			<app-product-form></app-product-form>
 			<app-product-table></app-product-table>
 		</div>
+		<div class="tab-pane fade" role="tabpanel" id="brands-tab">
+			<h3 class="text-center">Brands</h3>
+			<hr />
+			<br />
+			<!-- <app-product-form></app-product-form>
+			<app-product-table></app-product-table> -->
+		</div>
 		<div class="tab-pane fade" role="tabpanel" id="supplier-tab">
 			<h3 class="text-center">Suppliers</h3>
 			<hr />
@@ -29,6 +42,14 @@
 			<app-supplier-form></app-supplier-form>
 			<br /><br />
 			<app-supplier-table></app-supplier-table>
+		</div>
+		<div class="tab-pane fade" role="tabpanel" id="orders-tab">
+			<h3 class="text-center">Orders</h3>
+			<hr />
+			<br />
+			<!-- <app-supplier-form></app-supplier-form> -->
+			<br /><br />
+			<!-- <app-supplier-table></app-supplier-table> -->
 		</div>
 	</div>
 </div>
